@@ -31,9 +31,9 @@ codegen/install:
 	go install github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen@latest
 	oapi-codegen -version
 
-## codegen generate. Usage: make codegen/generate OPENAPI_FILE=openapi.yaml
+## codegen generate. Usage: make codegen/generate PACKAGE=heartbeat OPENAPI_FILE=openapi.yaml
 codegen/generate:
-	oapi-codegen -package petstore ${OPENAPI_FILE} > petstore.open.go
+	oapi-codegen -package ${PACKAGE} ${OPENAPI_FILE} > ${PACKAGE}.open.go
 
 ## logs
 logs:
