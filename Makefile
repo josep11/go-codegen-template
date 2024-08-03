@@ -28,9 +28,10 @@ help:
 
 ## codegen install
 codegen/install:
-	go install github.com/deepmap/oapi-codegen/cmd/oapi-codegen@latest
+	go install github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen@latest
+	oapi-codegen -version
 
-## codegen generate. Usage: make codegen/generate OPENAPI_FILE=/Users/josepalsina/Downloads/openapi.yaml
+## codegen generate. Usage: make codegen/generate OPENAPI_FILE=openapi.yaml
 codegen/generate:
 	oapi-codegen -package petstore ${OPENAPI_FILE} > petstore.open.go
 
